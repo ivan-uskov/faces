@@ -33,8 +33,7 @@ pip install -r requirements.txt
 
 ## Запуск под другими платформами
 
-Если необходимо запускать под windows или под linux c 3 версией opencv 
-Необходимо собрать stasm_util по инструкции
+Если необходимо запускать под windows или под linux c 3ей версией opencv, то необходимо собрать stasm_util по инструкции
 https://github.com/alyssaq/stasm_build
 
 ## License
