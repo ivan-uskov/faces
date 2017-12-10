@@ -13,6 +13,13 @@
 ```
 git clone https://github.com/ivan-uskov/faces
 cd faces
+chmod +x run_server.sh
+cd squasher
+chown -R www-data:www-data static
+cd ../
+cd facemorpher/bin/
+chmod +x *
+cd ../../
 apt-get install python2.7
 apt-get install python-opencv
 apt-get install python-tk
