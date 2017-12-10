@@ -1,0 +1,15 @@
+dj-database-url
+django
+gunicorn
+psycopg2
+whitenoise
+pypugjs
+facemorpher
+numpy
+scipy
+matplotlib
+docopt
+Pillow
+future
+moviepy
+imageio
