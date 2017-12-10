@@ -24,6 +24,7 @@ pip install -r requirements.txt
 * Поправьте конфиг django, относительно папки в которую вы устанавливаете проект
 * Поправьте конфиг nginx, надо обновить директиву root и директиву server_name в файле nginx.conf и добавить его в /etc/nginx/conf.d
 * Сделайте доступ к папке static пользователю www-data
+* Если не хочется править пути везде, можно разместить проект в папке /app
 
 ## Запуск
 
@@ -39,6 +40,11 @@ https://github.com/alyssaq/stasm_build
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## FAQ
+
+* Запрос падает с 404, запрос отклоняется по timout поскольку слишком большие фотографии, можно сделать асинхронную обработку или увеличить timeout
+* Может не устанавливаться python-tk, скорее всего из-за старой версии ядра linux
 
 ## Использовал
 
