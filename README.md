@@ -4,7 +4,7 @@
 
 ## Установка
 
-Выполните следующие действия, доступные операционные системы Mac OS, Linux
+Доступные операционные системы Mac OS, Linux
 
 ### Окружение
 
@@ -38,8 +38,8 @@ https://github.com/alyssaq/stasm_build
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
-## Acknowledgments
+## Использовал
 
 * alyssaq/face_morpher
