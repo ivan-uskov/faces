@@ -1,1 +1,0 @@
-gunicorn --keep-alive 120 --graceful-timeout 9000 --log-level=debug --timeout=9000 squasher.wsgi
