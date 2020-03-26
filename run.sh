@@ -1,0 +1,1 @@
+docker run -v  /home/ivan.uskov/projects/study/faces:/app --name py3 --rm -it ivanuskov/faces:0.0.1 bash
