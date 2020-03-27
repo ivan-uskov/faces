@@ -3,10 +3,10 @@ import os
 
 
 def morph(src, dst, res_dir):
-    os.system("python /app/face_morpher/facemorpher/morpher.py --src=" + src + " --dest=" + dst + " --background=average --out_frames=" + res_dir + " --num=12")
+    os.system("python /app/face_morpher/facemorpher/morpher.py --src=" + src + " --dest=" + dst + " --background=transparent --out_frames=" + res_dir + " --num=12")
 
 def average(src_dir, dst):
-    os.system("python /app/face_morpher/facemorpher/averager.py --work=" + src_dir + " --out=" + dst)
+    os.system("python /app/face_morpher/facemorpher/averager.py --work=" + src_dir + " --background=transparent --out=" + dst)
 
 def copy(src, dst):
     os.system("cp " + src + " " + dst)
