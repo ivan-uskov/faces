@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <link rel="shortcut icon" type="image/jpg" href="/favicon.ico"/>
+        <title>Лица</title>
+        <link rel="stylesheet" href="css/jquery-ui.css">
+        <script src="js/jquery-1.12.4.js"></script>
+        <script src="js/jquery-ui.js"></script>
+    </head>
+    <body>
+        <div class="container" style="width:1000px;margin:0 auto">
+            <div id="images" style="margin-bottom: 40px"></div>
+            <div id="slider1" style="margin-bottom: 40px"></div>
+            <div id="slider2" style="margin-bottom: 40px"></div>
+            <div id="slider3"></div>
+        </div>
+        <script>
+            $(function() {
+                for (let a = 1; a <= 10; a++) {
+                    for (let b = 1; b <= 10; b++) {
+                        for (let c = 1; c <= 10; c++) {
+                            let name = a + '_' + b + '_' + c;
+                            $("#images").append('<img style="display:none;margin:0 auto" class="image" id="' + name + '" src="work/result/' + name + '.png' + '" />');
+                        }
+                    }
+                }
+
+                function prepare(v) {
+                    return Math.max(0, Math.round(v / 10));
+                }
+
+                function update(a, b, c) {
+                    $('.image').css('display', 'none');
+                    $('#' + a + '_' + b + '_' + c).css('display', 'block');
+                }
+
+                $('#0_0_1').css('display', 'block');
+                $( "#slider1" ).slider({
+                    step: 10,
+                    change: function(e, ui) {
+                        update(prepare($( "#slider1" ).slider('value')), prepare($( "#slider2" ).slider('value')), prepare($( "#slider3" ).slider('value')));
+                    }
+                });
+                $( "#slider2" ).slider({
+                    step: 10,
+                    change: function(e, ui) {
+                        update(prepare($( "#slider1" ).slider('value')), prepare($( "#slider2" ).slider('value')), prepare($( "#slider3" ).slider('value')));
+                    }
+                });
+                $( "#slider3" ).slider({
+                    step: 10,
+                    change: function(e, ui) {
+                        update(prepare($( "#slider1" ).slider('value')), prepare($( "#slider2" ).slider('value')), prepare($( "#slider3" ).slider('value')));
+                    }
+                });
+            });
+
+        </script>
+    </body>
+</html>
