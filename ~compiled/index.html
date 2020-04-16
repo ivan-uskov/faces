@@ -17,9 +17,9 @@
         </div>
         <script>
             $(function() {
-                for (let a = 1; a <= 10; a++) {
-                    for (let b = 1; b <= 10; b++) {
-                        for (let c = 1; c <= 10; c++) {
+                for (let a = 0; a < 10; a++) {
+                    for (let b = 0; b < 10; b++) {
+                        for (let c = 0; c < 10; c++) {
                             let name = a + '_' + b + '_' + c;
                             $("#images").append('<img style="display:none;margin:0 auto" class="image" id="' + name + '" src="work/result/' + name + '.png' + '" />');
                         }
@@ -38,18 +38,21 @@
                 $('#0_0_1').css('display', 'block');
                 $( "#slider1" ).slider({
                     step: 10,
+                    max: 90,
                     change: function(e, ui) {
                         update(prepare($( "#slider1" ).slider('value')), prepare($( "#slider2" ).slider('value')), prepare($( "#slider3" ).slider('value')));
                     }
                 });
                 $( "#slider2" ).slider({
                     step: 10,
+                    max: 90,
                     change: function(e, ui) {
                         update(prepare($( "#slider1" ).slider('value')), prepare($( "#slider2" ).slider('value')), prepare($( "#slider3" ).slider('value')));
                     }
                 });
                 $( "#slider3" ).slider({
                     step: 10,
+                    max: 90,
                     change: function(e, ui) {
                         update(prepare($( "#slider1" ).slider('value')), prepare($( "#slider2" ).slider('value')), prepare($( "#slider3" ).slider('value')));
                     }
