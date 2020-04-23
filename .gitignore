@@ -4,6 +4,5 @@ staticfiles
 .env
 db.sqlite3
 .idea
-work/tmp
-work/result
-~compiled/work/*
+work
+result/*.png
